@@ -5,6 +5,7 @@ import {
   Toolbar,
   Typography,
 } from "@material-ui/core";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 const useStyles = makeStyles(() => ({
   title: {
@@ -15,11 +16,13 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
+const queryClient = new QueryClient();
+
 function Root(): JSX.Element {
   const classes = useStyles();
 
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
@@ -28,7 +31,7 @@ function Root(): JSX.Element {
         </Toolbar>
       </AppBar>
       <Grid container direction="column" className={classes.container} />
-    </>
+    </QueryClientProvider>
   );
 }
 
