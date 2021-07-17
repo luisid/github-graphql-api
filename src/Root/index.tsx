@@ -6,6 +6,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { RepoListPage } from "../pages/RepoList";
 
 const useStyles = makeStyles(() => ({
   title: {
@@ -30,7 +31,9 @@ function Root(): JSX.Element {
           </Typography>
         </Toolbar>
       </AppBar>
-      <Grid container direction="column" className={classes.container} />
+      <Grid container direction="column" className={classes.container}>
+        <RepoListPage />
+      </Grid>
     </QueryClientProvider>
   );
 }

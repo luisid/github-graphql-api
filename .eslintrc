@@ -41,6 +41,9 @@
     ],
     // It's not accurate in the monorepo style
     "import/no-extraneous-dependencies": "off",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off"
   }
 }
